@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #d1913c; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #d1913c,
+          #ffd194
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #d1913c,
+          #ffd194
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        font-family: sans-serif;
+        color:black;
+      }
+      h1 {
+        margin: 10px;
+        text-align:center;
+      }
+      p {
+        margin: 10px;
+        padding: 8px;
+        border:1px solid white;
+        border-radius:6px;
+        width:40%;
+        position:relative;
+          left:30%;
+
+      }
+      input{
+          margin:10px;
+      }
+      button{
+          width:100px;
+          font-size:15px;
+          position:relative;
+          left:45%;
+      }
+      #output{
+          background:white;
+          margin: 10px;
+        padding: 8px;
+        border:1px solid white;
+        border-radius:6px;
+        width:40%;
+        position:relative;
+          left:30%;
+          text-align:center;
+      }
+    </style>
+    <title>Addition</title>
+  </head>
+  <body>
+    <h1>Wanna add numbers! I am here for you</h1>
+    <p>
+      Add first Number<input
+        type="number"
+        id="first-number"
+        name="first-number"
+      />
+    </p>
+    <p>
+      Add first Number<input
+        type="number"
+        id="second-number"
+        name="second-number"
+      />
+    </p>
+
+    <button onclick="addition()">Enter</button>
+    <div id="output"></div>
+    <script>
+      function addition() {
+        var a = document.getElementById("first-number").value;
+        var b = document.getElementById("second-number").value;
+        // document.write(a+"\n");
+        // document.write(b+"\n");
+        var sum = parseInt(a) + parseInt(b);
+
+        console.log(sum);
+        document.getElementById("output").innerHTML =
+          " <p> Sum of Given Numbers is : <br></p>" + sum;
+      }
+    </script>
+  </body>
+</html>
